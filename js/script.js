@@ -1,0 +1,12 @@
+$(function(){
+    $('.toggle').on('click',function(){
+        $(this).toggleClass('on');
+        $('.gnb').toggleClass('on');
+    });
+    $('.gnb>.gnb1>ul>li').on('mouseenter',function(){
+            $('.gnb>.gnb1>ul>li').removeClass('active');
+            $(this).addClass('active');
+            $('.sub').stop().fadeOut(250);  	
+            $(this).children('.sub').stop().fadeIn(250);
+    });
+});
